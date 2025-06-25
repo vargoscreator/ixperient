@@ -1985,7 +1985,7 @@ main.main{
 .aicalendar__cat {
     position: absolute;
     bottom: -23px;
-    right: 22%;
+    right: 10%;
     display: flex;
     align-items: center;
     width: 143px;
@@ -2071,10 +2071,11 @@ main.main{
     position: absolute;
     top: 90%;
     left: 90%;
-    z-index: 2;
+    z-index: 30;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 1.5px 3px 6px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
 }
 .aicalendar__item-image img{
     width: 100%;
@@ -2223,8 +2224,8 @@ main.main{
         bottom: -27px;
     }
     .aicalendar__cat {
-        bottom: -12px;
-        right: 23.1%;
+        bottom: -3px;
+        right: 10.1%;
         width: 100px;
     }
     .aicalendar__title{
@@ -2360,7 +2361,7 @@ main.main{
     .aicalendar{
         margin-top: 13px;
     }
-    .aicalendar__block{
+    .aicalendar__block > *:not(.aicalendar__cat){
         display: none;
     }
     .aicalendar::before {
@@ -2393,8 +2394,8 @@ main.main{
         width: 100%;
     }
     .aicalendar__cat {
-        bottom: -3px;
-        right: 23.1%;
+        bottom: 22px;
+        right: 17.1%;
         width: 38px;
     }
     .aicalendar__title::before {
@@ -2404,7 +2405,6 @@ main.main{
         bottom: -6px;
     }
 }
-
 /* imageScroll */
 .imageScroll{
     margin-top: 108px;
@@ -2957,5 +2957,22 @@ main.main{
     .aicalendar__title,
     .aicalendar__image{
         transform: none;
+    }
+        .aicalendar::before {
+        width: 90.547px;
+        height: 90.519px;
+        top: 19px;
+        left: -25px;
+    }
+    .aicalendar::after {
+        width: 75px;
+        height: 75px;
+        right: -3px;
+        bottom: -3px;
+    }
+    .aicalendar__cat {
+        bottom: 22px;
+        right: 11.1%;
+        width: 38px;
     }
 }
