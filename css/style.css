@@ -525,6 +525,9 @@ main.main{
     position: absolute;
     top: -65px;
 }
+.infoBlock-select#aigenerator{
+    top: -100px;
+}
 .infoBlock__select{
     display: flex;
     align-items: stretch;
@@ -675,6 +678,15 @@ main.main{
         font-size: 12.779px;
         margin-top: 9px;
     }
+    .infoBlock-select{
+        top: -20px;
+    }
+    .infoBlock-select#aigenerator {
+        top: -80px;
+    }
+    .infoBlock-select#aitemplates{
+        top: -80px;
+    }
 }
 @media (max-width: 999px) {
     .infoBlock__select-btn > svg {
@@ -698,6 +710,9 @@ main.main{
         width: 55px;
         min-width: 55px;
         height: 55px;
+    }
+    .infoBlock-select#aitemplates{
+        top: -60px;
     }
 }
 @media (max-width: 767px) {
@@ -754,6 +769,23 @@ main.main{
     .infoBlock:nth-of-type(6) .infoBlock__select-btn-icon{
         top: 10px;
         right: 8px;
+    }
+    .infoBlock-select{
+        top: -40px;
+    }
+    .infoBlock-select#autoposting{
+        top: -50px;
+    }
+    .infoBlock-select#aigenerator {
+        top: -60px;
+    }
+}
+@media (max-width: 372px) {
+    .infoBlock__select-btn-icon{
+        display: none;
+    }
+    .infoBlock__select-btn--content{
+        width: 100% !important;
     }
 }
 .marketing{
