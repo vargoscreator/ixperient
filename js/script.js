@@ -81,14 +81,46 @@ document.addEventListener('click', (e) => {
 });
 
 gsap.registerPlugin(ScrollTrigger);
+
+const getEndValue = () => {
+  const width = window.innerWidth;
+    if (width < 364) return "top-=80 top";
+  if (width < 480) return "top-=90 top";
+  if (width < 768) return "top-=150 top";
+  if (width < 1280) return "top-=110 top";
+  return "top-=60 top";
+};
+
 gsap.to(".autoposting__capsule-image", {
   scrollTrigger: {
     trigger: ".autoposting__capsule-image",
     start: () => `top-=${window.innerHeight * 0.2} top`,
     endTrigger: ".autoposting__middle-image",
-    end: "top-=100 top",
+    end: getEndValue,
     scrub: true,
     pin: true,
-    pinSpacing: false
+    pinSpacing: false,
   }
 });
+
+
+// Резкое изменение картинки в конце
+ScrollTrigger.create({
+  trigger: ".autoposting__middle-image",
+  start: "top-=100 top",
+  onEnter: () => {
+    gsap.to(".autoposting__capsule-image img", {
+      scale: 0.6,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  },
+  onLeaveBack: () => {
+    gsap.to(".autoposting__capsule-image img", {
+      scale: 1,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  }
+});
+
