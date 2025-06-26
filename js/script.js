@@ -84,11 +84,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const getEndValue = () => {
   const width = window.innerWidth;
-    if (width < 364) return "top-=120 top";
-  if (width < 480) return "top-=130 top";
-  if (width < 768) return "top-=150 top";
-  if (width < 1280) return "top-=110 top";
-  return "top-=60 top";
+  if (width < 340) return "top-=60% top";
+  if (width < 364) return "top-=65% top";
+  if (width < 392) return "top-=60% top";
+  if (width < 480) return "top-=70% top";
+  if (width < 768) return "top-=70% top";
+  if (width < 1280) return "top-=30% top";
+  return "top-=10% top";
 };
 
 gsap.to(".autoposting__capsule-image", {
