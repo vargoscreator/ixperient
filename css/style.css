@@ -1185,6 +1185,7 @@ main.main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 5;
 }
 .autoposting__capsule-bg{
     display: flex;
