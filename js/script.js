@@ -84,8 +84,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const getEndValue = () => {
   const width = window.innerWidth;
-    if (width < 364) return "top-=80 top";
-  if (width < 480) return "top-=90 top";
+    if (width < 364) return "top-=120 top";
+  if (width < 480) return "top-=130 top";
   if (width < 768) return "top-=150 top";
   if (width < 1280) return "top-=110 top";
   return "top-=60 top";
@@ -104,10 +104,16 @@ gsap.to(".autoposting__capsule-image", {
 });
 
 
-// Резкое изменение картинки в конце
+const getStartValue = () => {
+  const width = window.innerWidth;
+    if (width < 364) return "top-=100% top";
+  if (width < 768) return "top-=120% top";
+  if (width < 1280) return "top-=70% top";
+  return "top-=50% top";
+};
 ScrollTrigger.create({
   trigger: ".autoposting__middle-image",
-  start: "top-=100 top",
+  start: getStartValue,
   onEnter: () => {
     gsap.to(".autoposting__capsule-image img", {
       scale: 0.6,
