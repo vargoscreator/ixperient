@@ -1175,6 +1175,17 @@ main.main{
     position: relative;
     z-index: 1;
 }
+.autoposting__capsule::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/autoposting/bg-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 .autoposting__capsule-bg{
     display: flex;
     align-items: center;
