@@ -85,8 +85,8 @@ gsap.registerPlugin(ScrollTrigger);
 const getEndValue = () => {
   const width = window.innerWidth;
   if (width < 340) return "top-=60% top";
-  if (width < 364) return "top-=65% top";
-  if (width < 392) return "top-=60% top";
+  if (width < 364) return "top-=55% top";
+  if (width < 392) return "top-=50% top";
   if (width < 480) return "top-=70% top";
   if (width < 768) return "top-=70% top";
   if (width < 1280) return "top-=30% top";
