@@ -547,6 +547,12 @@ main.main{
     position: relative;
     z-index: 1;
 }
+.infoBlock__select-btn svg path{
+    transition: all .1s ease;
+}
+.infoBlock__select-btn:hover svg path{
+    fill: #BEBEBE;
+}
 .infoBlock__select-btn.active{
     align-items: start;
     justify-content: start;

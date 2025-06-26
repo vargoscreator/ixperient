@@ -79,3 +79,16 @@ document.addEventListener('click', (e) => {
     menu.classList.remove('active');
   }
 });
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.to(".autoposting__capsule-image", {
+  scrollTrigger: {
+    trigger: ".autoposting__capsule-image",
+    start: () => `top-=${window.innerHeight * 0.2} top`,
+    endTrigger: ".autoposting__middle-image",
+    end: "top-=100 top",
+    scrub: true,
+    pin: true,
+    pinSpacing: false
+  }
+});
